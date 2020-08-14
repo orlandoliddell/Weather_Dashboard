@@ -9,12 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href = "Assets/style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body class = m-3>
-    <div class="jumbotron">
+    <div class="jumbotron ">
         <div class="container">
           <h1 class="display-4 text-center">Weather Dashboard</h1>
           
@@ -23,24 +23,32 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 bg-light">
-                Search
+                <h2>Search For A City:</h2>
                 <textarea class = "location"></textarea>
-                <button class = "btn search fa fa-search">S</button>
+                <button type="button" class = "btn btn-primary searchBtn "><i class="fas fa-search"></i></button>
+                <ul class="recent">
+                    <li data-cityName="London">London</li>
+                    <li data-cityName="Paris">Paris</li>
+
+                </ul>
             </div>
             <div class="col-8 ">
                 <div class="row">
                     <div class="col border border-right-0">
                         <h1>Weather Info</h1>
+                        <div id="weatherInfo"></div>
                     </div>
                 </div>
+                <div class="row">5</div>
                 <div class="row">
-                    <h2>5 Day Forecast</h2>
-                    <div class="col-2"></div>
-                    <div class="col-2"></div>
-                    <div class="col-2"></div>
-                    <div class="col-2"></div>
-                    <div class="col-2"></div>
+                    <div id="day1" class="col-2 bg-primary text-white"></div>
+                    <div id="day2" class="col-2 bg-primary text-white"></div>
+                    <div id="day3" class="col-2 bg-primary text-white"></div>
+                    <div id="day4" class="col-2 bg-primary text-white"></div>
+                    <div id="day5" class="col-2 bg-primary text-white"></div>
                 </div>
+                 
+                
             </div>
         </div>
     </div>
@@ -54,7 +62,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/4985ab6721.js" crossorigin="anonymous"></script>
+        <script src="Assets/script.js"></script>
+
 
 
     
